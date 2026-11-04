@@ -1,3 +1,5 @@
+* [ ] 
+
 # PPO-GRPO-DG
 
 本仓库用于学习、实现和比较 Policy Gradient、PPO、GRPO 与 DG 相关的强化学习算法。其中，Policy Gradient 部分实现了基础的 REINFORCE 算法，并提供 PyTorch 版本和手动推导版本，便于对照理解自动求导背后的计算过程。
