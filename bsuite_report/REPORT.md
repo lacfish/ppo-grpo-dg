@@ -1,0 +1,101 @@
+# Official family scores
+
+Only complete families are scored, separately per training seed.
+No chunk-score averaging. Single-seed results are preliminary; bootstrap intervals are descriptive.
+GRPO: independent task episodes, not same-start rollouts. Feed-forward networks have no recurrent memory.
+Equal episode budgets/schedules do not guarantee equal transition or optimizer-step totals.
+
+|Family|Algorithm|Seeds|Mean|95% seed bootstrap CI|
+|---|---|---:|---:|---|
+|bandit|ppo|5|0.9477|[0.9460, 0.9494]|
+|bandit|grpo|5|0.9460|[0.9448, 0.9471]|
+|bandit|pg_gae|5|0.9477|[0.9460, 0.9494]|
+|bandit|dg_gae|5|0.9292|[0.9273, 0.9310]|
+|mnist|ppo|5|0.5681|[0.5504, 0.5849]|
+|mnist|grpo|5|0.5503|[0.5337, 0.5696]|
+|mnist|pg_gae|5|0.5632|[0.5426, 0.5871]|
+|mnist|dg_gae|5|0.6077|[0.5971, 0.6186]|
+|catch|ppo|5|0.7643|[0.7466, 0.7768]|
+|catch|grpo|5|0.7236|[0.7166, 0.7324]|
+|catch|pg_gae|5|0.7633|[0.7470, 0.7741]|
+|catch|dg_gae|5|0.4210|[0.4045, 0.4396]|
+|cartpole|ppo|5|0.6360|[0.6067, 0.6592]|
+|cartpole|grpo|5|0.7280|[0.6753, 0.7781]|
+|cartpole|pg_gae|5|0.6143|[0.5923, 0.6363]|
+|cartpole|dg_gae|5|0.4566|[0.2562, 0.5571]|
+|mountain_car|ppo|5|0.1046|[0.1006, 0.1087]|
+|mountain_car|grpo|5|0.1001|[0.1000, 0.1004]|
+|mountain_car|pg_gae|5|0.1010|[0.1003, 0.1016]|
+|mountain_car|dg_gae|5|0.1001|[0.1000, 0.1002]|
+|bandit_noise|ppo|5|0.5658|[0.5436, 0.5863]|
+|bandit_noise|grpo|5|0.5643|[0.5446, 0.5824]|
+|bandit_noise|pg_gae|5|0.5658|[0.5436, 0.5863]|
+|bandit_noise|dg_gae|5|0.3981|[0.3843, 0.4105]|
+|mnist_noise|ppo|5|0.2386|[0.2255, 0.2523]|
+|mnist_noise|grpo|5|0.2276|[0.2222, 0.2339]|
+|mnist_noise|pg_gae|5|0.2375|[0.2254, 0.2515]|
+|mnist_noise|dg_gae|5|0.2349|[0.2294, 0.2414]|
+|catch_noise|ppo|5|0.2213|[0.2076, 0.2351]|
+|catch_noise|grpo|5|0.1393|[0.1318, 0.1483]|
+|catch_noise|pg_gae|5|0.2213|[0.2079, 0.2352]|
+|catch_noise|dg_gae|5|0.1044|[0.0981, 0.1124]|
+|cartpole_noise|ppo|5|0.5641|[0.4961, 0.6032]|
+|cartpole_noise|grpo|5|0.6348|[0.6247, 0.6471]|
+|cartpole_noise|pg_gae|5|0.5049|[0.4164, 0.5934]|
+|cartpole_noise|dg_gae|5|0.1065|[0.0856, 0.1273]|
+|mountain_car_noise|ppo|5|0.1006|[0.1001, 0.1011]|
+|mountain_car_noise|grpo|5|0.1006|[0.1000, 0.1013]|
+|mountain_car_noise|pg_gae|5|0.1006|[0.1001, 0.1011]|
+|mountain_car_noise|dg_gae|5|0.1000|[0.1000, 0.1001]|
+|bandit_scale|ppo|5|0.8964|[0.8933, 0.8998]|
+|bandit_scale|grpo|5|0.9463|[0.9451, 0.9477]|
+|bandit_scale|pg_gae|5|0.8964|[0.8933, 0.8998]|
+|bandit_scale|dg_gae|5|0.8031|[0.7987, 0.8076]|
+|mnist_scale|ppo|5|0.2329|[0.2230, 0.2441]|
+|mnist_scale|grpo|5|0.5461|[0.5267, 0.5676]|
+|mnist_scale|pg_gae|5|0.2313|[0.2213, 0.2413]|
+|mnist_scale|dg_gae|5|0.2130|[0.2054, 0.2198]|
+|catch_scale|ppo|5|0.2704|[0.2612, 0.2847]|
+|catch_scale|grpo|5|0.7222|[0.7143, 0.7316]|
+|catch_scale|pg_gae|5|0.2702|[0.2609, 0.2845]|
+|catch_scale|dg_gae|5|0.1453|[0.1405, 0.1501]|
+|cartpole_scale|ppo|5|0.3162|[0.2818, 0.3727]|
+|cartpole_scale|grpo|5|0.6908|[0.6610, 0.7282]|
+|cartpole_scale|pg_gae|5|0.2835|[0.2543, 0.3385]|
+|cartpole_scale|dg_gae|5|0.2391|[0.1962, 0.2643]|
+|mountain_car_scale|ppo|5|0.1016|[0.1001, 0.1042]|
+|mountain_car_scale|grpo|5|0.1001|[0.1000, 0.1004]|
+|mountain_car_scale|pg_gae|5|0.1012|[0.1002, 0.1029]|
+|mountain_car_scale|dg_gae|5|0.1001|[0.1000, 0.1001]|
+|deep_sea|ppo|5|0.0000|[0.0000, 0.0000]|
+|deep_sea|grpo|5|0.0000|[0.0000, 0.0000]|
+|deep_sea|pg_gae|5|0.0000|[0.0000, 0.0000]|
+|deep_sea|dg_gae|5|0.0000|[0.0000, 0.0000]|
+|deep_sea_stochastic|ppo|5|0.0000|[0.0000, 0.0000]|
+|deep_sea_stochastic|grpo|5|0.0000|[0.0000, 0.0000]|
+|deep_sea_stochastic|pg_gae|5|0.0000|[0.0000, 0.0000]|
+|deep_sea_stochastic|dg_gae|5|0.0000|[0.0000, 0.0000]|
+|discounting_chain|ppo|5|0.2517|[0.2273, 0.2819]|
+|discounting_chain|grpo|5|0.5318|[0.4735, 0.5909]|
+|discounting_chain|pg_gae|5|0.2582|[0.2274, 0.2890]|
+|discounting_chain|dg_gae|5|0.2427|[0.2357, 0.2498]|
+|memory_len|ppo|5|0.0435|[0.0435, 0.0435]|
+|memory_len|grpo|5|0.0435|[0.0435, 0.0435]|
+|memory_len|pg_gae|5|0.0435|[0.0435, 0.0435]|
+|memory_len|dg_gae|5|0.0435|[0.0435, 0.0435]|
+|memory_size|ppo|5|0.0000|[0.0000, 0.0000]|
+|memory_size|grpo|5|0.0000|[0.0000, 0.0000]|
+|memory_size|pg_gae|5|0.0000|[0.0000, 0.0000]|
+|memory_size|dg_gae|5|0.0000|[0.0000, 0.0000]|
+|umbrella_distract|ppo|5|0.0348|[0.0000, 0.0696]|
+|umbrella_distract|grpo|5|0.7304|[0.7043, 0.7565]|
+|umbrella_distract|pg_gae|5|0.0174|[0.0000, 0.0348]|
+|umbrella_distract|dg_gae|5|0.0000|[0.0000, 0.0000]|
+|umbrella_length|ppo|5|0.2783|[0.2609, 0.2957]|
+|umbrella_length|grpo|5|0.2696|[0.2435, 0.2957]|
+|umbrella_length|pg_gae|5|0.2783|[0.2609, 0.2957]|
+|umbrella_length|dg_gae|5|0.0870|[0.0870, 0.0870]|
+|cartpole_swingup|ppo|5|0.0000|[0.0000, 0.0000]|
+|cartpole_swingup|grpo|5|0.0000|[0.0000, 0.0000]|
+|cartpole_swingup|pg_gae|5|0.0000|[0.0000, 0.0000]|
+|cartpole_swingup|dg_gae|5|0.0000|[0.0000, 0.0000]|
