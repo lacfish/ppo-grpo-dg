@@ -126,4 +126,4 @@ python policy_gradient\detailed\train.py
 
 ## 后续计划
 
-- 添加PPO、PPO + Score-Centering对比实验
+添加PPO、PPO + Score-Centering对比实验

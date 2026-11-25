@@ -2,7 +2,7 @@ import gymnasium as gym
 import torch
 from networks import ActorCritic
 from buffer import RollOutBuffer
-from score_centering_agent import PPOScoreCentering
+from score_centering.PPOScoreCentering_agent import PPOScoreCentering
 
 # 设置超参数，num_envs,num_steps,batch_size,minibatch_size,update_epochs,total_iterations,device
 num_envs = 4
